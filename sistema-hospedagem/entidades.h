@@ -10,8 +10,18 @@ class Usuario {
             Data data;
             Descricao descricao;
     public:
-            void setnomeAtributo(const Dominio&);
-            Dominio getnomeAtributo() const;
+            void setNome(const Nome&);
+            Nome getNome() const;
+            void setEmail(const Email&);
+            Email getEmail() const;
+            void setSenha(const Senha&);
+            Senha getSenha) const;
+            void setIdioma(const Idioma&);
+            Idioma getIdioma() const;
+            void setData(const Data&);
+            Data getData() const;
+            void setDescricao(const Descricao&);
+            Descricao getDescricao() const;
 };
 
 inline void Entidade::setnomeAtributo(const Dominio &nomeAtributo){
@@ -33,8 +43,16 @@ class Hospedagem {
             Nota nota;
             Descricao descricao;
     public:
-            void setnomeAtributo(const Dominio&);
-            Dominio getnomeAtributo() const;
+            void setCodigo(const Codigo&);
+            Codigo getCodigo() const;
+            void setCidade(const Cidade&);
+            Cidade getCidade() const;
+            void setPais(const Pais&);
+            Pais getPais() const;
+            void setNota(const Nota&);
+            Pais getNota() const;
+            void setDescricao(const Descricao&);
+            Pais getDescricao() const;
 };
 
 inline void Entidade::setnomeAtributo(const Dominio &nomeAtributo){
@@ -55,8 +73,12 @@ class Avaliacao {
             Nota nota;
             Descricao descricao;
     public:
-            void setnomeAtributo(const Dominio&);
-            Dominio getnomeAtributo() const;
+            void setCodigo(const Codigo&);
+            Codigo getCodigo() const;
+            void setNota(const Nota&);
+            Nota getNota() const;
+            void setDescricao(const Descricao&);
+            Descricao getDescricao() const;
 };
 
 inline void Entidade::setnomeAtributo(const Dominio &nomeAtributo){
