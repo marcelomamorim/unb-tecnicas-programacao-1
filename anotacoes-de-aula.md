@@ -101,3 +101,8 @@ d) método inline:
 - this -> identificador do objeto no qual se atua no momento;
 
 
+## Aula 23/06/2022
+
+- [Conceito] Entidades: classes mais complexas (incluem os domínios);
+
+- [Conceito] Domínios: São classes de granularidade baixa. Abaixo de um "Domain" (ou um Type [Tipo]), só temos um tipo de linguagem (string, int etc - tipos primitivos);
