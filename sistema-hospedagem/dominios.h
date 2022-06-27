@@ -16,7 +16,7 @@ inline Tipo Dominio::getValor() const{
 
 
 // --------------------------------------------------------------------------
-// Domínio Cidade
+// Domínio Codigo
 
 
 class Codigo {
@@ -88,24 +88,6 @@ inline Tipo Dominio::getValor() const{
     return valor;
 }
 
-
-
-// --------------------------------------------------------------------------
-// Domínio Idioma
-
-
-class Idioma {
-    private:
-        Tipo valor;                      // Atributo para armazenar valor.
-        void validar(Tipo);              // Método para validar valor.
-    public:
-        void setValor(Tipo);             // Método para atribuir valor.
-        Tipo getValor() const;           // Método para recuperar valor.
-};
-
-inline Tipo Dominio::getValor() const{
-    return valor;
-}
 
 
 // --------------------------------------------------------------------------

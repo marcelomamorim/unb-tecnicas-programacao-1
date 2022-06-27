@@ -24,12 +24,52 @@ class Usuario {
             Descricao getDescricao() const;
 };
 
-inline void Entidade::setnomeAtributo(const Dominio &nomeAtributo){
-    this->nomeAtributo = nomeAtributo;
+inline void Usuario::setNome(const Nome &nome){
+    this->nome = nome;
 }
 
-inline Dominio Entidade::getnomeAtributo() const{
-    return nomeAtributo;
+inline Nome Usuario::getNome() const{
+    return nome;
+}
+
+inline void Usuario::setEmail(const Email &email){
+    this->email = email;
+}
+
+inline Email Usuario::getEmail() const{
+    return email;
+}
+
+inline void Usuario::setSenha(const Senha &senha){
+    this->senha = senha;
+}
+
+inline Senha Usuario::getSenha() const{
+    return senha;
+}
+
+inline void Usuario::setIdioma(const Idioma &idioma){
+    this->idioma = idioma;
+}
+
+inline Idioma Usuario::getIdioma() const{
+    return idioma;
+}
+
+inline void Usuario::setData(const Data &data){
+    this->data = data;
+}
+
+inline Data Usuario::getData() const{
+    return data;
+}
+
+inline void Usuario::setDescricao(const Descricao &descricao){
+    this->descricao = descricao;
+}
+
+inline Descricao Usuario::getDescricao() const{
+    return descricao;
 }
 
 // --------------------------------------------------------------------------
@@ -55,12 +95,44 @@ class Hospedagem {
             Pais getDescricao() const;
 };
 
-inline void Entidade::setnomeAtributo(const Dominio &nomeAtributo){
-    this->nomeAtributo = nomeAtributo;
+inline void Hospedagem::setCodigo(const Codigo &codigo){
+    this->codigo = codigo;
 }
 
-inline Dominio Entidade::getnomeAtributo() const{
-    return nomeAtributo;
+inline Codigo Hospedagem::getCodigo() const{
+    return codigo;
+}
+
+inline void Hospedagem::setCidade(const Cidade &cidade){
+    this->cidade = cidade;
+}
+
+inline Cidade Hospedagem::getCidade() const{
+    return cidade;
+}
+
+inline void Hospedagem::setPais(const Pais &pais){
+    this->pais = pais;
+}
+
+inline Pais Hospedagem::getPais() const{
+    return pais;
+}
+
+inline void Hospedagem::setNota(const Nota &nota){
+    this->nota = nota;
+}
+
+inline Nota Hospedagem::getNota() const{
+    return nota;
+}
+
+inline void Hospedagem::setDescricao(const Descricao &descricao){
+    this->descricao = descricao;
+}
+
+inline Descricao Hospedagem::getDescricao() const{
+    return descricao;
 }
 
 
@@ -81,10 +153,26 @@ class Avaliacao {
             Descricao getDescricao() const;
 };
 
-inline void Entidade::setnomeAtributo(const Dominio &nomeAtributo){
-    this->nomeAtributo = nomeAtributo;
+inline void Avaliacao::setCodigo(const Codigo &codigo){
+    this->codigo = codigo;
 }
 
-inline Dominio Entidade::getnomeAtributo() const{
-    return nomeAtributo;
+inline Codigo Avaliacao::getCodigo() const{
+    return codigo;
+}
+
+inline void Avaliacao::setNota(const Nota &nota){
+    this->nota = nota;
+}
+
+inline Nota Avaliacao::getNota() const{
+    return nota;
+}
+
+inline void Avaliacao::setDescricao(const Descricao &descricao){
+    this->descricao = descricao;
+}
+
+inline Descricao Avaliacao::getDescricao() const{
+    return descricao;
 }
