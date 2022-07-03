@@ -3,38 +3,47 @@
 // --------------------------------------------------------------------------
 // Implementações de métodos de classe de teste de unidade.
 
-void TUCodigo::setUp(){
+void TUCodigo::setUp()
+{
     codigo = new Codigo();
     estado = SUCESSO;
 }
 
-void TUCodigo::tearDown(){
+void TUCodigo::tearDown()
+{
     delete codigo;
 }
 
-void TUCodigo::testarCenarioSucesso(){
-    try{
+void TUCodigo::testarCenarioSucesso()
+{
+    try
+    {
         codigo->setValor(VALOR_VALIDO);
         if (codigo->getValor() != VALOR_VALIDO)
             estado = FALHA;
     }
-    catch(invalid_argument &excecao){
+    catch(invalid_argument &excecao)
+    {
         estado = FALHA;
     }
 }
 
-void TUCodigo::testarCenarioFalha(){
-    try{
+void TUCodigo::testarCenarioFalha()
+{
+    try
+    {
         codigo->setValor(VALOR_INVALIDO);
         estado = FALHA;
     }
-    catch(invalid_argument &excecao){
+    catch(invalid_argument &excecao)
+    {
         if (codigo->getValor() == VALOR_INVALIDO)
             estado = FALHA;
     }
 }
 
-int TUCodigo::run(){
+int TUCodigo::run()
+{
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
@@ -45,16 +54,19 @@ int TUCodigo::run(){
 // --------------------------------------------------------------------------
 // Implementações de métodos de classe de teste de unidade.
 
-void TUProjeto::setUp(){
+void TUProjeto::setUp()
+{
     projeto = new Projeto();
     estado = SUCESSO;
 }
 
-void TUProjeto::tearDown(){
+void TUProjeto::tearDown()
+{
     delete projeto;
 }
 
-void TUProjeto::testarCenarioSucesso(){
+void TUProjeto::testarCenarioSucesso()
+{
     Codigo codigo;
     codigo.setValor(VALOR_VALIDO);
     projeto->setCodigo(codigo);
@@ -68,7 +80,8 @@ void TUProjeto::testarCenarioSucesso(){
         estado = FALHA;
 }
 
-int TUProjeto::run(){
+int TUProjeto::run()
+{
     setUp();
     testarCenarioSucesso();
     tearDown();

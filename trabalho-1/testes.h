@@ -1,9 +1,5 @@
-// Diretivas de compilação para controlar processo de inclusão.
-
 #ifndef TESTES_H_INCLUDED
 #define TESTES_H_INCLUDED
-
-// Incluir cabeçalhos.
 
 #include "dominios.h"
 #include "entidades.h"
@@ -13,7 +9,8 @@ using namespace std;
 // --------------------------------------------------------------------------
 // Declaração de classe para teste de unidade de classe domínio = Código.
 
-class TUCodigo {
+class TUCodigo
+{
 private:
     const static int VALOR_VALIDO   = 20;   // Definição de constante para evitar número mágico.
     const static int VALOR_INVALIDO = 30;   // Definição de constante para evitar número mágico.
@@ -33,7 +30,8 @@ public:
 // --------------------------------------------------------------------------
 // Declaração de classe para teste de unidade de classe domínio = Cidade.
 
-class TUCidade {
+class TUCidade
+{
 private:
     const static int VALOR_VALIDO   = 20;   // Definição de constante para evitar número mágico.
     const static int VALOR_INVALIDO = 30;   // Definição de constante para evitar número mágico.
@@ -55,7 +53,8 @@ public:
 // Declaração de classe para teste de unidade de classe domínio = Data.
 
 
-class TUData {
+class TUData
+{
 private:
     const static int VALOR_VALIDO   = 20;   // Definição de constante para evitar número mágico.
     const static int VALOR_INVALIDO = 30;   // Definição de constante para evitar número mágico.
@@ -77,7 +76,8 @@ public:
 // Declaração de classe para teste de unidade de classe domínio = Descrição.
 
 
-class TUDescricao {
+class TUDescricao
+{
 private:
     const static int VALOR_VALIDO   = 20;   // Definição de constante para evitar número mágico.
     const static int VALOR_INVALIDO = 30;   // Definição de constante para evitar número mágico.
@@ -99,7 +99,8 @@ public:
 // Declaração de classe para teste de unidade de classe domínio = Email.
 
 
-class TUEmail {
+class TUEmail
+{
 private:
     const static int VALOR_VALIDO   = 20;   // Definição de constante para evitar número mágico.
     const static int VALOR_INVALIDO = 30;   // Definição de constante para evitar número mágico.
@@ -121,7 +122,8 @@ public:
 // Declaração de classe para teste de unidade de classe domínio = Idioma.
 
 
-class TUIdioma {
+class TUIdioma
+{
 private:
     const static int VALOR_VALIDO   = 20;   // Definição de constante para evitar número mágico.
     const static int VALOR_INVALIDO = 30;   // Definição de constante para evitar número mágico.
@@ -143,7 +145,8 @@ public:
 // Declaração de classe para teste de unidade de classe domínio = Nome.
 
 
-class TUNome {
+class TUNome
+{
 private:
     const static int VALOR_VALIDO   = 20;   // Definição de constante para evitar número mágico.
     const static int VALOR_INVALIDO = 30;   // Definição de constante para evitar número mágico.
@@ -165,7 +168,8 @@ public:
 // Declaração de classe para teste de unidade de classe domínio = Nota.
 
 
-class TUNota {
+class TUNota
+{
 private:
     const static int VALOR_VALIDO   = 20;   // Definição de constante para evitar número mágico.
     const static int VALOR_INVALIDO = 30;   // Definição de constante para evitar número mágico.
@@ -182,13 +186,15 @@ public:
     int run();                              // Método para executar teste.
 };
 
-// --------------------------------------------------------------------------
-// Exemplo de declaração de classe para teste de unidade de classe entidade.
 
-class TUProjeto {
+// --------------------------------------------------------------------------
+// Declaração de classe para teste de unidade de classe entidade = Usuario.
+
+class TUUsuario
+{
 private:
     const static int VALOR_VALIDO   = 20;   // Definição de constante para evitar número mágico.
-    Projeto *projeto;                       // Referência para unidade em teste.
+    Usuario *usuario;                       // Referência para unidade em teste.
     int estado;                             // Estado do teste.
     void setUp();                           // Método para criar unidade em teste.
     void tearDown();                        // Método para destruir unidade em teste.
@@ -198,5 +204,43 @@ public:
     const static int FALHA   = -1;          // Definição de constante para reportar resultado de teste.
     int run();                              // Método para executar teste.
 };
+
+// --------------------------------------------------------------------------
+// Declaração de classe para teste de unidade de classe entidade = Hospedagem.
+
+class TUHospedagem
+{
+private:
+    const static int VALOR_VALIDO   = 20;   // Definição de constante para evitar número mágico.
+    Hospedagem *hospedagem;                       // Referência para unidade em teste.
+    int estado;                             // Estado do teste.
+    void setUp();                           // Método para criar unidade em teste.
+    void tearDown();                        // Método para destruir unidade em teste.
+    void testarCenarioSucesso();            // Cenário de teste.
+public:
+    const static int SUCESSO =  0;          // Definição de constante para reportar resultado de teste.
+    const static int FALHA   = -1;          // Definição de constante para reportar resultado de teste.
+    int run();                              // Método para executar teste.
+};
+
+
+// --------------------------------------------------------------------------
+// Declaração de classe para teste de unidade de classe entidade = Avaliacao.
+
+class TUAvaliacao
+{
+private:
+    const static int VALOR_VALIDO   = 20;   // Definição de constante para evitar número mágico.
+    Avaliacao *avaliacao;                       // Referência para unidade em teste.
+    int estado;                             // Estado do teste.
+    void setUp();                           // Método para criar unidade em teste.
+    void tearDown();                        // Método para destruir unidade em teste.
+    void testarCenarioSucesso();            // Cenário de teste.
+public:
+    const static int SUCESSO =  0;          // Definição de constante para reportar resultado de teste.
+    const static int FALHA   = -1;          // Definição de constante para reportar resultado de teste.
+    int run();                              // Método para executar teste.
+};
+
 
 #endif // TESTES_H_INCLUDED
