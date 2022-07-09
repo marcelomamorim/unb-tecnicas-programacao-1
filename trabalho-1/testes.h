@@ -7,45 +7,43 @@
 using namespace std;
 
 // --------------------------------------------------------------------------
-// Declaração de classe para teste de unidade de classe domínio = Código.
+// Declaração de classe para teste de unidade de classes de domínio e entidades.
 
-class TUCodigo
+class TesteUnitario {
+    private:
+        int estado;
+        void setUp();
+        void tearDown();
+        void testarCenarioSucesso();
+    public:
+        const static int SUCESSO =  0;
+        const static int FALHA   = -1;
+        int run();
+};
+
+// --------------------------------------------------------------------------
+// Declaração de classe para teste de unidade de classes de domínio = Código
+
+
+class TUCodigo : public TesteUnitario
 {
 private:
-    const static int VALOR_VALIDO   = 20;   // Definição de constante para evitar número mágico.
-    const static int VALOR_INVALIDO = 30;   // Definição de constante para evitar número mágico.
-    Codigo *codigo;                         // Referência para unidade em teste.
-    int estado;                             // Estado do teste.
-    void setUp();                           // Método para criar unidade em teste.
-    void tearDown();                        // Método para destruir unidade em teste.
-    void testarCenarioSucesso();            // Cenário de teste.
-    void testarCenarioFalha();              // Cenário de teste.
-
-public:
-    const static int SUCESSO =  0;          // Definição de constante para reportar resultado de teste.
-    const static int FALHA   = -1;          // Definição de constante para reportar resultado de teste.
-    int run();                              // Método para executar teste.
+    const static int VALOR_VALIDO   = 20;
+    const static int VALOR_INVALIDO = 30;
+    Codigo *codigo;
+    void testarCenarioFalha();
 };
 
 // --------------------------------------------------------------------------
 // Declaração de classe para teste de unidade de classe domínio = Cidade.
 
-class TUCidade
+class TUCidade : public TesteUnitario
 {
 private:
-    const static int VALOR_VALIDO   = 20;   // Definição de constante para evitar número mágico.
-    const static int VALOR_INVALIDO = 30;   // Definição de constante para evitar número mágico.
-    Cidade *cidade;                         // Referência para unidade em teste.
-    int estado;                             // Estado do teste.
-    void setUp();                           // Método para criar unidade em teste.
-    void tearDown();                        // Método para destruir unidade em teste.
-    void testarCenarioSucesso();            // Cenário de teste.
-    void testarCenarioFalha();              // Cenário de teste.
-
-public:
-    const static int SUCESSO =  0;          // Definição de constante para reportar resultado de teste.
-    const static int FALHA   = -1;          // Definição de constante para reportar resultado de teste.
-    int run();                              // Método para executar teste.
+    const static int VALOR_VALIDO   = 20;
+    const static int VALOR_INVALIDO = 30;
+    Cidade *cidade;
+    void testarCenarioFalha();
 };
 
 
@@ -53,22 +51,13 @@ public:
 // Declaração de classe para teste de unidade de classe domínio = Data.
 
 
-class TUData
+class TUData : public TesteUnitario
 {
 private:
-    const static int VALOR_VALIDO   = 20;   // Definição de constante para evitar número mágico.
-    const static int VALOR_INVALIDO = 30;   // Definição de constante para evitar número mágico.
-    Data *data;                         // Referência para unidade em teste.
-    int estado;                             // Estado do teste.
-    void setUp();                           // Método para criar unidade em teste.
-    void tearDown();                        // Método para destruir unidade em teste.
-    void testarCenarioSucesso();            // Cenário de teste.
-    void testarCenarioFalha();              // Cenário de teste.
-
-public:
-    const static int SUCESSO =  0;          // Definição de constante para reportar resultado de teste.
-    const static int FALHA   = -1;          // Definição de constante para reportar resultado de teste.
-    int run();                              // Método para executar teste.
+    const static int VALOR_VALIDO   = 20;
+    const static int VALOR_INVALIDO = 30;
+    Data *data;
+    void testarCenarioFalha();
 };
 
 
@@ -76,22 +65,13 @@ public:
 // Declaração de classe para teste de unidade de classe domínio = Descrição.
 
 
-class TUDescricao
+class TUDescricao : public TesteUnitario
 {
 private:
-    const static int VALOR_VALIDO   = 20;   // Definição de constante para evitar número mágico.
-    const static int VALOR_INVALIDO = 30;   // Definição de constante para evitar número mágico.
-    Descricao *descricao;                         // Referência para unidade em teste.
-    int estado;                             // Estado do teste.
-    void setUp();                           // Método para criar unidade em teste.
-    void tearDown();                        // Método para destruir unidade em teste.
-    void testarCenarioSucesso();            // Cenário de teste.
-    void testarCenarioFalha();              // Cenário de teste.
-
-public:
-    const static int SUCESSO =  0;          // Definição de constante para reportar resultado de teste.
-    const static int FALHA   = -1;          // Definição de constante para reportar resultado de teste.
-    int run();                              // Método para executar teste.
+    const static int VALOR_VALIDO   = 20;
+    const static int VALOR_INVALIDO = 30;
+    Descricao *descricao;
+    void testarCenarioFalha();
 };
 
 
@@ -99,22 +79,13 @@ public:
 // Declaração de classe para teste de unidade de classe domínio = Email.
 
 
-class TUEmail
+class TUEmail : public TesteUnitario
 {
 private:
-    const static int VALOR_VALIDO   = 20;   // Definição de constante para evitar número mágico.
-    const static int VALOR_INVALIDO = 30;   // Definição de constante para evitar número mágico.
-    Email *email;                         // Referência para unidade em teste.
-    int estado;                             // Estado do teste.
-    void setUp();                           // Método para criar unidade em teste.
-    void tearDown();                        // Método para destruir unidade em teste.
-    void testarCenarioSucesso();            // Cenário de teste.
-    void testarCenarioFalha();              // Cenário de teste.
-
-public:
-    const static int SUCESSO =  0;          // Definição de constante para reportar resultado de teste.
-    const static int FALHA   = -1;          // Definição de constante para reportar resultado de teste.
-    int run();                              // Método para executar teste.
+    const static int VALOR_VALIDO   = 20;
+    const static int VALOR_INVALIDO = 30;
+    Email *email;
+    void testarCenarioFalha();
 };
 
 
@@ -122,45 +93,26 @@ public:
 // Declaração de classe para teste de unidade de classe domínio = Idioma.
 
 
-class TUIdioma
+class TUIdioma : public TesteUnitario
 {
 private:
-    const static int VALOR_VALIDO   = 20;   // Definição de constante para evitar número mágico.
-    const static int VALOR_INVALIDO = 30;   // Definição de constante para evitar número mágico.
-    Idioma *idioma;                         // Referência para unidade em teste.
-    int estado;                             // Estado do teste.
-    void setUp();                           // Método para criar unidade em teste.
-    void tearDown();                        // Método para destruir unidade em teste.
-    void testarCenarioSucesso();            // Cenário de teste.
-    void testarCenarioFalha();              // Cenário de teste.
-
-public:
-    const static int SUCESSO =  0;          // Definição de constante para reportar resultado de teste.
-    const static int FALHA   = -1;          // Definição de constante para reportar resultado de teste.
-    int run();                              // Método para executar teste.
-};
+    const static int VALOR_VALIDO   = 20;
+    const static int VALOR_INVALIDO = 30;
+    Idioma *idioma;
+    void testarCenarioFalha();
 
 
 // --------------------------------------------------------------------------
 // Declaração de classe para teste de unidade de classe domínio = Nome.
 
 
-class TUNome
+class TUNome : public TesteUnitario
 {
 private:
-    const static int VALOR_VALIDO   = 20;   // Definição de constante para evitar número mágico.
-    const static int VALOR_INVALIDO = 30;   // Definição de constante para evitar número mágico.
-    Nome *nome;                         // Referência para unidade em teste.
-    int estado;                             // Estado do teste.
-    void setUp();                           // Método para criar unidade em teste.
-    void tearDown();                        // Método para destruir unidade em teste.
-    void testarCenarioSucesso();            // Cenário de teste.
-    void testarCenarioFalha();              // Cenário de teste.
-
-public:
-    const static int SUCESSO =  0;          // Definição de constante para reportar resultado de teste.
-    const static int FALHA   = -1;          // Definição de constante para reportar resultado de teste.
-    int run();                              // Método para executar teste.
+    const static int VALOR_VALIDO   = 20;
+    const static int VALOR_INVALIDO = 30;
+    Nome *nome;
+    void testarCenarioFalha();
 };
 
 
@@ -168,78 +120,46 @@ public:
 // Declaração de classe para teste de unidade de classe domínio = Nota.
 
 
-class TUNota
+class TUNota : public TesteUnitario
 {
 private:
-    const static int VALOR_VALIDO   = 20;   // Definição de constante para evitar número mágico.
-    const static int VALOR_INVALIDO = 30;   // Definição de constante para evitar número mágico.
-    Nota *nota;                         // Referência para unidade em teste.
-    int estado;                             // Estado do teste.
-    void setUp();                           // Método para criar unidade em teste.
-    void tearDown();                        // Método para destruir unidade em teste.
-    void testarCenarioSucesso();            // Cenário de teste.
-    void testarCenarioFalha();              // Cenário de teste.
-
-public:
-    const static int SUCESSO =  0;          // Definição de constante para reportar resultado de teste.
-    const static int FALHA   = -1;          // Definição de constante para reportar resultado de teste.
-    int run();                              // Método para executar teste.
+    const static int VALOR_VALIDO   = 20;
+    const static int VALOR_INVALIDO = 30;
+    Nota *nota;
+    void testarCenarioFalha();
 };
 
 
 // --------------------------------------------------------------------------
 // Declaração de classe para teste de unidade de classe entidade = Usuario.
 
-class TUUsuario
+class TUUsuario : public TesteUnitario
 {
 private:
-    const static int VALOR_VALIDO   = 20;   // Definição de constante para evitar número mágico.
-    Usuario *usuario;                       // Referência para unidade em teste.
-    int estado;                             // Estado do teste.
-    void setUp();                           // Método para criar unidade em teste.
-    void tearDown();                        // Método para destruir unidade em teste.
-    void testarCenarioSucesso();            // Cenário de teste.
-public:
-    const static int SUCESSO =  0;          // Definição de constante para reportar resultado de teste.
-    const static int FALHA   = -1;          // Definição de constante para reportar resultado de teste.
-    int run();                              // Método para executar teste.
+    const static int VALOR_VALIDO   = 20;
+    Usuario *usuario;
 };
 
 // --------------------------------------------------------------------------
 // Declaração de classe para teste de unidade de classe entidade = Hospedagem.
 
-class TUHospedagem
+class TUHospedagem : public TesteUnitario
 {
 private:
-    const static int VALOR_VALIDO   = 20;   // Definição de constante para evitar número mágico.
-    Hospedagem *hospedagem;                       // Referência para unidade em teste.
-    int estado;                             // Estado do teste.
-    void setUp();                           // Método para criar unidade em teste.
-    void tearDown();                        // Método para destruir unidade em teste.
-    void testarCenarioSucesso();            // Cenário de teste.
-public:
-    const static int SUCESSO =  0;          // Definição de constante para reportar resultado de teste.
-    const static int FALHA   = -1;          // Definição de constante para reportar resultado de teste.
-    int run();                              // Método para executar teste.
+    const static int VALOR_VALIDO   = 20;
+    Hospedagem *hospedagem;
+
 };
 
 
 // --------------------------------------------------------------------------
 // Declaração de classe para teste de unidade de classe entidade = Avaliacao.
 
-class TUAvaliacao
+class TUAvaliacao : public TesteUnitario
 {
 private:
-    const static int VALOR_VALIDO   = 20;   // Definição de constante para evitar número mágico.
-    Avaliacao *avaliacao;                       // Referência para unidade em teste.
-    int estado;                             // Estado do teste.
-    void setUp();                           // Método para criar unidade em teste.
-    void tearDown();                        // Método para destruir unidade em teste.
-    void testarCenarioSucesso();            // Cenário de teste.
-public:
-    const static int SUCESSO =  0;          // Definição de constante para reportar resultado de teste.
-    const static int FALHA   = -1;          // Definição de constante para reportar resultado de teste.
-    int run();                              // Método para executar teste.
+    const static int VALOR_VALIDO   = 20;
+    Avaliacao *avaliacao;
 };
 
 

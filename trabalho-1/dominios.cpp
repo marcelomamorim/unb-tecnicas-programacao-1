@@ -4,23 +4,6 @@
 using namespace std;
 
 
-void Codigo::validar(string codigo)
-{
-    string numeros_codigo = codigo.substr(0,9);
-    string digito_verificador = codigo.substr(9,10);
-
-    for(char digito : codigo) {
-        if(!isdigit(digito)) throw invalid_argument("O caractere " + digito + " não é uma entrada válida");
-    }
-
-}
-
-void Codigo::setValor(string valor)
-{
-    validar(valor);
-    this->valor = valor;
-}
-
 // --------------------------------------------------------------------------
 // Implementações de métodos da classe Cidade
 
@@ -34,7 +17,7 @@ void Cidade::validar(string valor)
         if(valor == cidade) { entradaValida == true };
     };
 
-    if(permito == false) { throw invalid_argument("A cidade " + valor + " não está na lista de cidades permitidas."); };
+    if(entradaValida == false) { throw invalid_argument("A cidade " + valor + " não está na lista de cidades permitidas."); };
 
 }
 
@@ -70,6 +53,25 @@ vector<string> inicializaListaCidadesPermitidas()
     return cidadesPermitidas;
 };
 
+
+
+void Codigo::validar(string codigo)
+{
+    string numeros_codigo = codigo.substr(0,9);
+    string digito_verificador = codigo.substr(9,10);
+
+    for(char digito : codigo) {
+        if(!isdigit(digito)) throw invalid_argument("O caractere " + digito + " não é uma entrada válida");
+    }
+
+}
+
+void Codigo::setValor(string valor)
+{
+    validar(valor);
+    this->valor = valor;
+}
+
 // --------------------------------------------------------------------------
 // Implementações de métodos da classe Data
 
@@ -79,6 +81,14 @@ void Data::validar(string valor)
     string dia = valor.substr(0, posicao_barra);
     string mes = valor.substr(posicao_barra, valor.length());
 
+    vector<string> formatoMesesPermitods = inicializaFormatoDeMesesPermitidos();
+    bool oMesEstaNoFormatoValido = oMesEstaNoFormatoValido(mes, formatoMesesPermitods);
+    bool oDiaEstaNoFormatoValido = stoi(dia) >= 1 && stoi(dia) <= 31;
+
+    if(!oDiaEstaNoFormatoValido || !oMesEstaNoFormatoValido)
+    {
+        throw invalid_argument("Dia ou mês inseridos com valores não suportados.");
+    }
 
 }
 
@@ -88,18 +98,63 @@ void Data::setValor(string valor)
     this->valor = valor;
 }
 
+vector<string> inicializaFormatoDeMesesPermitidos()
+{
+    vector<string> mesesNoFormatoPermitido;
+    mesesNoFormatoPermitido.push_back("Jan");
+    mesesNoFormatoPermitido.push_back("Fev");
+    mesesNoFormatoPermitido.push_back("Mar");
+    mesesNoFormatoPermitido.push_back("Abr");
+    mesesNoFormatoPermitido.push_back("Mai");
+    mesesNoFormatoPermitido.push_back("Jun");
+    mesesNoFormatoPermitido.push_back("Jul");
+    mesesNoFormatoPermitido.push_back("Ago");
+    mesesNoFormatoPermitido.push_back("Set");
+    mesesNoFormatoPermitido.push_back("Out");
+    mesesNoFormatoPermitido.push_back("Nov");
+    mesesNoFormatoPermitido.push_back("Dez");
+
+    return mesesNoFormatoPermitido;
+};
+
+bool oMesEstaNoFormatoValido(string mesInserido, vector<string> mesesNoFormatoPermitido) {
+
+    bool formatoValido = false;
+
+    for(auto mes : mesesNoFormatoPermitido) {
+        if(mesInserido == mes) { formatoValido == true };
+    };
+
+    return formatoValido;
+};
+
 
 // --------------------------------------------------------------------------
 // Implementações de métodos da classe Descricao
 
 void Descricao::validar(string valor)
 {
-    bool validacao_numero_caracteres = 0 <= valor.length() <= 40;
-    bool validacao_sem_espacos_em_branco = valor.find(" ") == false;
+    bool validacao_numero_caracteres = valor.length() > 40;
+    bool validacao_sem_espacos_em_branco = valor.find("  ") == false;
+    bool validacao_caracteres_especiais_ponto = valor.find("..") == false;
+    bool validacao_caracteres_especiais_virgula = valor.find(",,") == false;
+    bool validacao_caracteres_especiais_ponto_e_virgula = valor.find(";;") == false;
+    bool validacao_caracteres_especiais_dois_pontos = valor.find("::") == false;
+    bool validacao_caracteres_especiais_interrogacao = valor.find("??") == false;
+    bool validacao_caracteres_especiais_exclamacao = valor.find("!!") == false;
+    bool validacao_caracteres_especiais_traco = valor.find("--") == false;
 
-    if(validacao_numero_caracteres || !validacao_sem_espacos_em_branco)
+    if(validacao_numero_caracteres ||
+      !validacao_sem_espacos_em_branco ||
+      !validacao_caracteres_especiais_ponto ||
+      !validacao_caracteres_especiais_virgula ||
+      !validacao_caracteres_especiais_ponto_e_virgula ||
+      !validacao_caracteres_especiais_dois_pontos ||
+      !validacao_caracteres_especiais_interrogacao ||
+      !validacao_caracteres_especiais_exclamacao ||
+      !validacao_caracteres_especiais_traco)
     {
-        throw invalid_argument("Argumento invalido.");
+        throw invalid_argument("Argumento inválido.");
     }
 
 }
@@ -116,8 +171,7 @@ void Descricao::setValor(string valor)
 
 void Email::validar(string valor)
 {
-    if (valor == INVALIDO)
-        throw invalid_argument("Argumento invalido.");
+
 }
 
 void Email::setValor(string valor)
@@ -208,8 +262,17 @@ void Nota::setValor(string valor)
 
 void Pais::validar(string valor)
 {
-    if (valor == INVALIDO)
-        throw invalid_argument("Argumento invalido.");
+    vector<string> paisesPermitidos = inicializaListaDePaisesPermitidos();
+    bool entradaValida = false;
+
+    for(auto pais : paisesPermitidos)
+    {
+        if(pais == valor) {entradaValida = true};
+    }
+
+    if(entradaValida == false) {
+        throw invalid_argument("O país " + valor + " não está na lista de países permitidos.");
+    };
 }
 
 void Pais::setValor(string valor)
@@ -217,6 +280,25 @@ void Pais::setValor(string valor)
     validar(valor);
     this->valor = valor;
 }
+
+vector<string> inicializaListaDePaisesPermitidos()
+{
+    vector<string> paisesPermitidos;
+    paisesPermitidos.push_back("Estados Unidos");
+    paisesPermitidos.push_back("Brasil");
+    paisesPermitidos.push_back("China");
+    paisesPermitidos.push_back("Coreia do Sul");
+    paisesPermitidos.push_back("Emirados");
+    paisesPermitidos.push_back("França");
+    paisesPermitidos.push_back("Índia");
+    paisesPermitidos.push_back("Japão");
+    paisesPermitidos.push_back("Malásia");
+    paisesPermitidos.push_back("Reino Unido");
+    paisesPermitidos.push_back("Tailândia");
+    paisesPermitidos.push_back("Turquia");
+
+    return paisesPermitidos;
+};
 
 
 // --------------------------------------------------------------------------
