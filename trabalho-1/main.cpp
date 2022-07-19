@@ -118,10 +118,10 @@ int main()
     switch (testePais.run())
     {
     case TUPais::SUCESSO:
-        cout << "SUCESSO - CODIGO" << endl;
+        cout << "SUCESSO - PAIS" << endl;
         break;
     case TUPais::FALHA:
-        cout << "FALHA   - CODIGO" << endl;
+        cout << "FALHA   - PAIS" << endl;
         break;
     }
 
@@ -132,10 +132,10 @@ int main()
     switch (testeNota.run())
     {
     case TUNota::SUCESSO:
-        cout << "SUCESSO - CODIGO" << endl;
+        cout << "SUCESSO - NOTA" << endl;
         break;
     case TUNota::FALHA:
-        cout << "FALHA   - CODIGO" << endl;
+        cout << "FALHA   - NOTA" << endl;
         break;
     }
 
@@ -147,10 +147,10 @@ int main()
     switch (testeUsuario.run())
     {
     case TUUsuario::SUCESSO:
-        cout << "SUCESSO - PROJETO" << endl;
+        cout << "SUCESSO - USUARIO" << endl;
         break;
     case TUUsuario::FALHA:
-        cout << "FALHA   - PROJETO" << endl;
+        cout << "FALHA   - USUARIO" << endl;
         break;
     }
 
@@ -162,10 +162,10 @@ int main()
     switch (testeHospedagem.run())
     {
     case TUHospedagem::SUCESSO:
-        cout << "SUCESSO - PROJETO" << endl;
+        cout << "SUCESSO - HOSPEDAGEM" << endl;
         break;
     case TUHospedagem::FALHA:
-        cout << "FALHA   - PROJETO" << endl;
+        cout << "FALHA   - HOSPEDAGEM" << endl;
         break;
     }
 
@@ -177,10 +177,10 @@ int main()
     switch (testeAvaliacao.run())
     {
     case TUAvaliacao::SUCESSO:
-        cout << "SUCESSO - PROJETO" << endl;
+        cout << "SUCESSO - AVALIACAO" << endl;
         break;
     case TUAvaliacao::FALHA:
-        cout << "FALHA   - PROJETO" << endl;
+        cout << "FALHA   - AVALIACAO" << endl;
         break;
     }
 
@@ -191,10 +191,10 @@ int main()
     switch (testeIdioma.run())
     {
     case TUIdioma::SUCESSO:
-        cout << "SUCESSO - CODIGO" << endl;
+        cout << "SUCESSO - IDIOMA" << endl;
         break;
     case TUIdioma::FALHA:
-        cout << "FALHA   - CODIGO" << endl;
+        cout << "FALHA   - IDIOMA" << endl;
         break;
     }
 

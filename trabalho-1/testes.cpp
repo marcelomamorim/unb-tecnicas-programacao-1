@@ -273,7 +273,7 @@ int TUIdioma::run()
 // --------------------------------------------------------------------------
 // Implementações de métodos de classe de teste de unidade DOMAIN = DATA.
 
-const string TUData::VALOR_VALIDO = "20/10";
+const string TUData::VALOR_VALIDO = "20/Jan";
 const string TUData::VALOR_INVALIDO = "30";
 
 void TUData::setUp()
@@ -382,7 +382,7 @@ int TUDescricao::run()
 // --------------------------------------------------------------------------
 // Implementações de métodos de classe de teste de unidade DOMAIN = CIDADE.
 
-const string TUCidade::VALOR_VALIDO = "20";
+const string TUCidade::VALOR_VALIDO = "Antalya";
 const string TUCidade::VALOR_INVALIDO = "30";
 
 void TUCidade::setUp()
@@ -437,7 +437,7 @@ int TUCidade::run()
 // --------------------------------------------------------------------------
 // Implementações de métodos de classe de teste de unidade DOMAIN = PAÍS.
 
-const string TUPais::VALOR_VALIDO = "20";
+const string TUPais::VALOR_VALIDO = "Brasil";
 const string TUPais::VALOR_INVALIDO = "30";
 
 void TUPais::setUp()
@@ -491,7 +491,7 @@ int TUPais::run()
 // --------------------------------------------------------------------------
 // Implementações de métodos de classe de teste de unidade DOMAIN = NOTA.
 
-const string TUNota::VALOR_VALIDO = "20";
+const string TUNota::VALOR_VALIDO = "7";
 const string TUNota::VALOR_INVALIDO = "30";
 
 void TUNota::setUp()

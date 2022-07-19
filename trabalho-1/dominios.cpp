@@ -125,7 +125,7 @@ void Data::validar(string valor)
     }
 
     string dia = valor.substr(0, posicao_barra);
-    string mes = valor.substr(posicao_barra, valor.length()-1);
+    string mes = valor.substr(posicao_barra+1, valor.length());
 
     std::vector<string> formatoMesesPermitods = inicializaFormatoDeMesesPermitidos();
     bool ehValido = oMesEstaNoFormatoValido(mes, formatoMesesPermitods);
@@ -275,7 +275,7 @@ void Nome::setValor(string valor)
 
 void Nota::validar(string valor)
 {
-    if (0 > std::stoi(valor) && std::stoi(valor) > 10) {
+    if (0 > std::stoi(valor) || std::stoi(valor) > 10) {
         throw invalid_argument("Argumento invalido.");
     };
 
