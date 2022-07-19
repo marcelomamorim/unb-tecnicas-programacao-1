@@ -45,7 +45,7 @@ void Cidade::validar(string valor)
     bool entradaValida = false;
 
     for(auto cidade : cidadesPermitidas) {
-        if(valor == cidade) { entradaValida == true; };
+        if(valor == cidade) { entradaValida = true; };
     };
 
     if(entradaValida == false) { throw invalid_argument("A cidade " + valor + " não está na lista de cidades permitidas."); };
@@ -103,7 +103,7 @@ bool oMesEstaNoFormatoValido(string mesInserido, vector<string> mesesNoFormatoPe
     bool formatoValido = false;
 
     for(auto mes : mesesNoFormatoPermitido) {
-        if(mesInserido == mes) { formatoValido == true; };
+        if(mesInserido == mes) { formatoValido = true; };
     };
 
     return formatoValido;
@@ -251,7 +251,7 @@ void Nome::setValor(string valor)
 
 void Nota::validar(string valor)
 {
-    if (0 > std::stoi(valor) > 10)
+    if (0 > std::stoi(valor) && std::stoi(valor) > 10)
         throw invalid_argument("Argumento invalido.");
 }
 
