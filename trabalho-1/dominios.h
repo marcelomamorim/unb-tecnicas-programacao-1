@@ -5,17 +5,11 @@
 
 using namespace std;
 
-/*
-    1 - definição da classe (propósito da classe);
-    2 - informar regras de negócio;
-    3 - documentação deve ficar nos arquivos .h;
-    4 - preceder cada método público com o propósito desses métodos;
-    5 - ver exemplo 1 disponibilizado no aprender3.unb.br;
-*/
 
-// --------------------------------------------------------------------------
-// Domínio Cidade
-
+/**
+ * @brief Cidade referente à hospedagem.
+ * 
+ */
 class Cidade
 {
 private:
@@ -23,7 +17,15 @@ private:
     void validar(string);
 
 public:
+    /**
+     * @brief Define o nome da cidade
+     */
     void setValor(string);
+    /**
+     * @brief Busca valor da cidade
+     * 
+     * @return O nome da cidade 
+     */
     string getValor() const;
 };
 
@@ -32,9 +34,9 @@ inline string Cidade::getValor() const
     return valor;
 }
 
-// --------------------------------------------------------------------------
-// Domínio Codigo
-
+/**
+ * @brief Classe representa o código gerado no formato DDDDDDDDDDX.
+ */
 class Codigo
 {
 private:
@@ -42,7 +44,15 @@ private:
     void validar(string);
 
 public:
+    /**
+     * @brief Define valor do código
+     */
     void setValor(string);
+    /**
+     * @brief Busca valor do código
+     * 
+     * @return O código do usuário
+     */
     string getValor() const;
 };
 
@@ -51,9 +61,10 @@ inline string Codigo::getValor() const
     return valor;
 }
 
-// --------------------------------------------------------------------------
-// Domínio Data
-
+/**
+ * @brief Data de aniversário do Usuário
+ * 
+ */
 class Data
 {
 private:
@@ -61,7 +72,16 @@ private:
     void validar(string);
 
 public:
+    /**
+     * @brief Define valor da data de aniversário
+     * 
+     */
     void setValor(string);
+    /**
+     * @brief Busca valor da data
+     * 
+     * @return Data de aniversário 
+     */
     string getValor() const;
 };
 
@@ -70,9 +90,10 @@ inline string Data::getValor() const
     return valor;
 }
 
-// --------------------------------------------------------------------------
-// Domínio Descricao
-
+/**
+ * @brief Descrição do usuário
+ * 
+ */
 class Descricao
 {
 private:
@@ -80,7 +101,16 @@ private:
     void validar(string);
 
 public:
+    /**
+     * @brief Define descrição
+     * 
+     */
     void setValor(string);
+    /**
+     * @brief Busca descrição
+     * 
+     * @return Descrição 
+     */
     string getValor() const;
 };
 
@@ -89,9 +119,11 @@ inline string Descricao::getValor() const
     return valor;
 }
 
-// --------------------------------------------------------------------------
-// Domínio Email
 
+/**
+ * @brief Email do usuário
+ * 
+ */
 class Email
 {
 private:
@@ -99,7 +131,16 @@ private:
     void validar(string);
 
 public:
+    /**
+     * @brief Define valor de email
+     * 
+     */
     void setValor(string);
+    /**
+     * @brief Busca valor do email
+     * 
+     * @return Email do usuário 
+     */
     string getValor() const;
 };
 
@@ -108,9 +149,11 @@ inline string Email::getValor() const
     return valor;
 }
 
-// --------------------------------------------------------------------------
-// Domínio Idioma
 
+/**
+ * @brief Idioma falado pelo Usuário
+ * 
+ */
 class Idioma
 {
 private:
@@ -118,7 +161,16 @@ private:
     void validar(string);
 
 public:
+    /**
+     * @brief Define idioma falado pelo usuário
+     * 
+     */
     void setValor(string);
+    /**
+     * @brief Busca idioma
+     * 
+     * @return Idioma 
+     */
     string getValor() const;
 };
 
@@ -127,9 +179,10 @@ inline string Idioma::getValor() const
     return valor;
 }
 
-// --------------------------------------------------------------------------
-// Domínio Nome
-
+/**
+ * @brief Nome do Usuário.
+ * 
+ */
 class Nome
 {
 private:
@@ -137,7 +190,16 @@ private:
     void validar(string);
 
 public:
+    /**
+     * @brief Define nome do usuário no sistema
+     * 
+     */
     void setValor(string);
+    /**
+     * @brief Busca nome do usuário
+     * 
+     * @return Nome do usuário
+     */
     string getValor() const;
 };
 
@@ -146,9 +208,11 @@ inline string Nome::getValor() const
     return valor;
 }
 
-// --------------------------------------------------------------------------
-// Domínio Nota
 
+/**
+ * @brief Nota dada pelo usuário na avaliação da hospedagem.
+ * 
+ */
 class Nota
 {
 private:
@@ -156,7 +220,16 @@ private:
     void validar(string);
 
 public:
+    /**
+     * @brief Registra nota dada pelo usuário
+     * 
+     */
     void setValor(string);
+    /**
+     * @brief Busca nota
+     * 
+     * @return Nota dada pelo usuário
+     */
     string getValor() const;
 };
 
@@ -165,9 +238,11 @@ inline string Nota::getValor() const
     return valor;
 }
 
-// --------------------------------------------------------------------------
-// Domínio Pais
 
+/**
+ * @brief País no qual está se hospedando.
+ * 
+ */
 class Pais
 {
 private:
@@ -175,7 +250,16 @@ private:
     void validar(string);
 
 public:
+    /**
+     * @brief Define valor do país da hospedagem
+     * 
+     */
     void setValor(string);
+    /**
+     * @brief Busca país
+     * 
+     * @return País
+     */
     string getValor() const;
 };
 
@@ -184,9 +268,11 @@ inline string Pais::getValor() const
     return valor;
 }
 
-// --------------------------------------------------------------------------
-// Domínio Senha
 
+/**
+ * @brief Senha de login do usuário.
+ * 
+ */
 class Senha
 {
 private:
@@ -194,7 +280,16 @@ private:
     void validar(string);
 
 public:
+    /**
+     * @brief Define senha
+     * 
+     */
     void setValor(string);
+    /**
+     * @brief Busca senha
+     * 
+     * @return Senha
+     */
     string getValor() const;
 };
 

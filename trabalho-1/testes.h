@@ -6,10 +6,10 @@
 
 using namespace std;
 
-// --------------------------------------------------------------------------
-// Declaração de classe para teste de unidade de classes de domínio = Código
-
-
+/**
+ * @brief Teste Unitário para a classe Código
+ * 
+ */
 class TUCodigo
 {
 private:
@@ -22,14 +22,29 @@ private:
     void testarCenarioSucesso();
     void testarCenarioFalha();
 public:
+    /**
+     * @brief Código retornado quando o teste passa com sucesso
+     * 
+     */
     const static int SUCESSO =  0;
+    /**
+     * @brief Código retornado quando o teste falha
+     * 
+     */
     const static int FALHA   = -1;
+    /**
+     * @brief Método responsável por fazer o setUp e testar os cenários programados
+     * 
+     * @return Constante indicando se o teste passou ou não 
+     */
     int run();
 };
 
-// --------------------------------------------------------------------------
-// Declaração de classe para teste de unidade de classe domínio = Cidade.
 
+/**
+ * @brief Teste Unitário para a classe Cidade
+ * 
+ */
 class TUCidade
 {
 private:
@@ -42,16 +57,28 @@ private:
     void testarCenarioSucesso();
     void testarCenarioFalha();
 public:
+    /**
+     * @brief Código retornado quando o teste passa com sucesso
+     * 
+     */
     const static int SUCESSO =  0;
+    /**
+     * @brief Código retornado quando o teste falha
+     * 
+     */
     const static int FALHA   = -1;
+    /**
+     * @brief Método responsável por fazer o setUp e testar os cenários programados
+     * 
+     * @return Constante indicando se o teste passou ou não 
+     */
     int run();
 };
 
-
-// --------------------------------------------------------------------------
-// Declaração de classe para teste de unidade de classe domínio = Data.
-
-
+/**
+ * @brief Teste Unitário para a classe Data
+ * 
+ */
 class TUData
 {
 private:
@@ -64,16 +91,28 @@ private:
     void testarCenarioSucesso();
     void testarCenarioFalha();
 public:
+    /**
+     * @brief Código retornado quando o teste passa com sucesso
+     * 
+     */
     const static int SUCESSO =  0;
+    /**
+     * @brief Código retornado quando o teste falha
+     * 
+     */
     const static int FALHA   = -1;
+    /**
+     * @brief Método responsável por fazer o setUp e testar os cenários programados
+     * 
+     * @return Constante indicando se o teste passou ou não 
+     */
     int run();
 };
 
-
-// --------------------------------------------------------------------------
-// Declaração de classe para teste de unidade de classe domínio = Descrição.
-
-
+/**
+ * @brief Teste Unitário para a classe Descrição
+ * 
+ */
 class TUDescricao
 {
 private:
@@ -86,16 +125,28 @@ private:
     void testarCenarioSucesso();
     void testarCenarioFalha();
 public:
+    /**
+     * @brief Código retornado quando o teste passa com sucesso
+     * 
+     */
     const static int SUCESSO =  0;
+    /**
+     * @brief Código retornado quando o teste falha
+     * 
+     */
     const static int FALHA   = -1;
+    /**
+     * @brief Método responsável por fazer o setUp e testar os cenários programados
+     * 
+     * @return Constante indicando se o teste passou ou não 
+     */
     int run();
 };
 
-
-// --------------------------------------------------------------------------
-// Declaração de classe para teste de unidade de classe domínio = Email.
-
-
+/**
+ * @brief Teste Unitário para a classe Email
+ * 
+ */
 class TUEmail
 {
 private:
@@ -108,16 +159,28 @@ private:
     void testarCenarioSucesso();
     void testarCenarioFalha();
 public:
+    /**
+     * @brief Código retornado quando o teste passa com sucesso
+     * 
+     */
     const static int SUCESSO =  0;
+    /**
+     * @brief Código retornado quando o teste falha
+     * 
+     */
     const static int FALHA   = -1;
+    /**
+     * @brief Método responsável por fazer o setUp e testar os cenários programados
+     * 
+     * @return Constante indicando se o teste passou ou não 
+     */
     int run();
 };
 
-
-// --------------------------------------------------------------------------
-// Declaração de classe para teste de unidade de classe domínio = Idioma.
-
-
+/**
+ * @brief Teste Unitário para a classe Idioma
+ * 
+ */
 class TUIdioma
 {
 private:
@@ -130,16 +193,28 @@ private:
     void testarCenarioSucesso();
     void testarCenarioFalha();
 public:
+    /**
+     * @brief Código retornado quando o teste passa com sucesso
+     * 
+     */
     const static int SUCESSO =  0;
+    /**
+     * @brief Código retornado quando o teste falha
+     * 
+     */
     const static int FALHA   = -1;
+    /**
+     * @brief Método responsável por fazer o setUp e testar os cenários programados
+     * 
+     * @return Constante indicando se o teste passou ou não 
+     */
     int run();
 };
 
-
-// --------------------------------------------------------------------------
-// Declaração de classe para teste de unidade de classe domínio = Nome.
-
-
+/**
+ * @brief Teste Unitário para a classe Nome
+ * 
+ */
 class TUNome
 {
 private:
@@ -152,16 +227,28 @@ private:
     void testarCenarioSucesso();
     void testarCenarioFalha();
 public:
+    /**
+     * @brief Código retornado quando o teste passa com sucesso
+     * 
+     */
     const static int SUCESSO =  0;
+    /**
+     * @brief Código retornado quando o teste falha
+     * 
+     */
     const static int FALHA   = -1;
+    /**
+     * @brief Método responsável por fazer o setUp e testar os cenários programados
+     * 
+     * @return Constante indicando se o teste passou ou não 
+     */
     int run();
 };
 
-
-// --------------------------------------------------------------------------
-// Declaração de classe para teste de unidade de classe domínio = Nota.
-
-
+/**
+ * @brief Teste Unitário para a classe Nota
+ * 
+ */
 class TUNota
 {
 private:
@@ -174,15 +261,28 @@ private:
     void testarCenarioSucesso();
     void testarCenarioFalha();
 public:
+    /**
+     * @brief Código retornado quando o teste passa com sucesso
+     * 
+     */
     const static int SUCESSO =  0;
+    /**
+     * @brief Código retornado quando o teste falha
+     * 
+     */
     const static int FALHA   = -1;
+    /**
+     * @brief Método responsável por fazer o setUp e testar os cenários programados
+     * 
+     * @return Constante indicando se o teste passou ou não 
+     */
     int run();
 };
 
-// --------------------------------------------------------------------------
-// Declaração de classe para teste de unidade de classe domínio = País.
-
-
+/**
+ * @brief Teste Unitário para a classe País
+ * 
+ */
 class TUPais
 {
 private:
@@ -195,15 +295,28 @@ private:
     void testarCenarioSucesso();
     void testarCenarioFalha();
 public:
+    /**
+     * @brief Código retornado quando o teste passa com sucesso
+     * 
+     */
     const static int SUCESSO =  0;
+    /**
+     * @brief Código retornado quando o teste falha
+     * 
+     */
     const static int FALHA   = -1;
+    /**
+     * @brief Método responsável por fazer o setUp e testar os cenários programados
+     * 
+     * @return Constante indicando se o teste passou ou não 
+     */
     int run();
 };
 
-// --------------------------------------------------------------------------
-// Declaração de classe para teste de unidade de classe domínio = Senha.
-
-
+/**
+ * @brief Teste Unitário para a classe Senha
+ * 
+ */
 class TUSenha
 {
 private:
@@ -216,15 +329,28 @@ private:
     void testarCenarioSucesso();
     void testarCenarioFalha();
 public:
+    /**
+     * @brief Código retornado quando o teste passa com sucesso
+     * 
+     */
     const static int SUCESSO =  0;
+    /**
+     * @brief Código retornado quando o teste falha
+     * 
+     */
     const static int FALHA   = -1;
+    /**
+     * @brief Método responsável por fazer o setUp e testar os cenários programados
+     * 
+     * @return Constante indicando se o teste passou ou não 
+     */
     int run();
 };
 
-
-// --------------------------------------------------------------------------
-// Declaração de classe para teste de unidade de classe entidade = Usuario.
-
+/**
+ * @brief Teste Unitário para a classe Usuário
+ * 
+ */
 class TUUsuario
 {
 private:
@@ -235,14 +361,28 @@ private:
     void tearDown();
     void testarCenarioSucesso();
 public:
+    /**
+     * @brief Código retornado quando o teste passa com sucesso
+     * 
+     */
     const static int SUCESSO =  0;
+    /**
+     * @brief Código retornado quando o teste falha
+     * 
+     */
     const static int FALHA   = -1;
+    /**
+     * @brief Método responsável por fazer o setUp e testar os cenários programados
+     * 
+     * @return Constante indicando se o teste passou ou não 
+     */
     int run();
 };
 
-// --------------------------------------------------------------------------
-// Declaração de classe para teste de unidade de classe entidade = Hospedagem.
-
+/**
+ * @brief Teste Unitário para a classe Hospedagem
+ * 
+ */
 class TUHospedagem
 {
 private:
@@ -253,16 +393,29 @@ private:
     void tearDown();
     void testarCenarioSucesso();
 public:
+    /**
+     * @brief Código retornado quando o teste passa com sucesso
+     * 
+     */
     const static int SUCESSO =  0;
+    /**
+     * @brief Código retornado quando o teste falha
+     * 
+     */
     const static int FALHA   = -1;
+    /**
+     * @brief Método responsável por fazer o setUp e testar os cenários programados
+     * 
+     * @return Constante indicando se o teste passou ou não 
+     */
     int run();
 
 };
 
-
-// --------------------------------------------------------------------------
-// Declaração de classe para teste de unidade de classe entidade = Avaliacao.
-
+/**
+ * @brief Teste Unitário para a classe Avaliação
+ * 
+ */
 class TUAvaliacao
 {
 private:
@@ -273,8 +426,21 @@ private:
     void tearDown();
     void testarCenarioSucesso();
 public:
+    /**
+     * @brief Código retornado quando o teste passa com sucesso
+     * 
+     */
     const static int SUCESSO =  0;
+    /**
+     * @brief Código retornado quando o teste falha
+     * 
+     */
     const static int FALHA   = -1;
+    /**
+     * @brief Método responsável por fazer o setUp e testar os cenários programados
+     * 
+     * @return Constante indicando se o teste passou ou não 
+     */
     int run();
 };
 

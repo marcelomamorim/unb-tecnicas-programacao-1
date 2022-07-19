@@ -19,11 +19,11 @@ int main()
 
     switch (testeNome.run())
     {
-    case TUCodigo::SUCESSO:
-        cout << "SUCESSO - CODIGO" << endl;
+    case TUNome::SUCESSO:
+        cout << "SUCESSO - NOME" << endl;
         break;
-    case TUCodigo::FALHA:
-        cout << "FALHA   - CODIGO" << endl;
+    case TUNome::FALHA:
+        cout << "FALHA   - NOME" << endl;
         break;
     }
 
@@ -33,11 +33,11 @@ int main()
 
     switch (testeEmail.run())
     {
-    case TUCodigo::SUCESSO:
-        cout << "SUCESSO - CODIGO" << endl;
+    case TUEmail::SUCESSO:
+        cout << "SUCESSO - EMAIL" << endl;
         break;
-    case TUCodigo::FALHA:
-        cout << "FALHA   - CODIGO" << endl;
+    case TUEmail::FALHA:
+        cout << "FALHA   - EMAIL" << endl;
         break;
     }
 
@@ -47,25 +47,11 @@ int main()
 
     switch (testeSenha.run())
     {
-    case TUCodigo::SUCESSO:
-        cout << "SUCESSO - CODIGO" << endl;
+    case TUSenha::SUCESSO:
+        cout << "SUCESSO - SENHA" << endl;
         break;
-    case TUCodigo::FALHA:
-        cout << "FALHA   - CODIGO" << endl;
-        break;
-    }
-
-    // Instanciar classe de teste de domínio.
-
-    TUIdioma testeIdioma;
-
-    switch (testeIdioma.run())
-    {
-    case TUCodigo::SUCESSO:
-        cout << "SUCESSO - CODIGO" << endl;
-        break;
-    case TUCodigo::FALHA:
-        cout << "FALHA   - CODIGO" << endl;
+    case TUSenha::FALHA:
+        cout << "FALHA   - SENHA" << endl;
         break;
     }
 
@@ -75,11 +61,11 @@ int main()
 
     switch (testeData.run())
     {
-    case TUCodigo::SUCESSO:
-        cout << "SUCESSO - CODIGO" << endl;
+    case TUData::SUCESSO:
+        cout << "SUCESSO - DATA" << endl;
         break;
-    case TUCodigo::FALHA:
-        cout << "FALHA   - CODIGO" << endl;
+    case TUData::FALHA:
+        cout << "FALHA   - DATA" << endl;
         break;
     }
 
@@ -89,11 +75,11 @@ int main()
 
     switch (testeDescricao.run())
     {
-    case TUCodigo::SUCESSO:
-        cout << "SUCESSO - CODIGO" << endl;
+    case TUDescricao::SUCESSO:
+        cout << "SUCESSO - DESCRIÇÃO" << endl;
         break;
-    case TUCodigo::FALHA:
-        cout << "FALHA   - CODIGO" << endl;
+    case TUDescricao::FALHA:
+        cout << "FALHA   - DESCRIÇÃO" << endl;
         break;
     }
 
@@ -117,11 +103,11 @@ int main()
 
     switch (testeCidade.run())
     {
-    case TUCodigo::SUCESSO:
-        cout << "SUCESSO - CODIGO" << endl;
+    case TUCidade::SUCESSO:
+        cout << "SUCESSO - CIDADE" << endl;
         break;
-    case TUCodigo::FALHA:
-        cout << "FALHA   - CODIGO" << endl;
+    case TUCidade::FALHA:
+        cout << "FALHA   - CIDADE" << endl;
         break;
     }
 
@@ -145,10 +131,10 @@ int main()
 
     switch (testeNota.run())
     {
-    case TUCodigo::SUCESSO:
+    case TUNota::SUCESSO:
         cout << "SUCESSO - CODIGO" << endl;
         break;
-    case TUCodigo::FALHA:
+    case TUNota::FALHA:
         cout << "FALHA   - CODIGO" << endl;
         break;
     }
@@ -195,6 +181,20 @@ int main()
         break;
     case TUAvaliacao::FALHA:
         cout << "FALHA   - PROJETO" << endl;
+        break;
+    }
+
+    // Instanciar classe de teste de domínio.
+
+    TUIdioma testeIdioma;
+
+    switch (testeIdioma.run())
+    {
+    case TUIdioma::SUCESSO:
+        cout << "SUCESSO - CODIGO" << endl;
+        break;
+    case TUIdioma::FALHA:
+        cout << "FALHA   - CODIGO" << endl;
         break;
     }
 

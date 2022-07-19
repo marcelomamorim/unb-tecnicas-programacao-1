@@ -60,11 +60,17 @@ void Cidade::setValor(string valor)
 
 void Codigo::validar(string codigo)
 {
+    if(codigo.length() < 10) {
+        throw invalid_argument("O código não é uma entrada válida");
+    }
+
     string numeros_codigo = codigo.substr(0,9);
     string digito_verificador = codigo.substr(9,10);
 
     for(char digito : codigo) {
-        if(!isdigit(digito)) throw invalid_argument("O caractere não é uma entrada válida");
+        if(!isdigit(digito)) {
+            throw invalid_argument("O caractere não é uma entrada válida");
+        }
     }
 
 }
@@ -113,10 +119,15 @@ bool oMesEstaNoFormatoValido(string mesInserido, vector<string> mesesNoFormatoPe
 void Data::validar(string valor)
 {
     int posicao_barra = valor.find("/");
-    string dia = valor.substr(0, posicao_barra);
-    string mes = valor.substr(posicao_barra, valor.length());
 
-    vector<string> formatoMesesPermitods = inicializaFormatoDeMesesPermitidos();
+    if(posicao_barra == string::npos) {
+        throw invalid_argument("Dia ou mês inseridos com valores não suportados.");
+    }
+
+    string dia = valor.substr(0, posicao_barra);
+    string mes = valor.substr(posicao_barra, valor.length()-1);
+
+    std::vector<string> formatoMesesPermitods = inicializaFormatoDeMesesPermitidos();
     bool ehValido = oMesEstaNoFormatoValido(mes, formatoMesesPermitods);
     bool oDiaEstaNoFormatoValido = stoi(dia) >= 1 && stoi(dia) <= 31;
 
@@ -140,14 +151,14 @@ void Data::setValor(string valor)
 void Descricao::validar(string valor)
 {
     bool validacao_numero_caracteres = valor.length() > 40;
-    bool validacao_sem_espacos_em_branco = valor.find("  ") == false;
-    bool validacao_caracteres_especiais_ponto = valor.find("..") == false;
-    bool validacao_caracteres_especiais_virgula = valor.find(",,") == false;
-    bool validacao_caracteres_especiais_ponto_e_virgula = valor.find(";;") == false;
-    bool validacao_caracteres_especiais_dois_pontos = valor.find("::") == false;
-    bool validacao_caracteres_especiais_interrogacao = valor.find("??") == false;
-    bool validacao_caracteres_especiais_exclamacao = valor.find("!!") == false;
-    bool validacao_caracteres_especiais_traco = valor.find("--") == false;
+    bool validacao_sem_espacos_em_branco = valor.find("  ") == string::npos;
+    bool validacao_caracteres_especiais_ponto = valor.find("..") == string::npos;
+    bool validacao_caracteres_especiais_virgula = valor.find(",,") == string::npos;
+    bool validacao_caracteres_especiais_ponto_e_virgula = valor.find(";;") == string::npos;
+    bool validacao_caracteres_especiais_dois_pontos = valor.find("::") == string::npos;
+    bool validacao_caracteres_especiais_interrogacao = valor.find("??") == string::npos;
+    bool validacao_caracteres_especiais_exclamacao = valor.find("!!") == string::npos;
+    bool validacao_caracteres_especiais_traco = valor.find("--") == string::npos;
 
     if(validacao_numero_caracteres ||
       !validacao_sem_espacos_em_branco ||
@@ -177,6 +188,11 @@ void Descricao::setValor(string valor)
 void Email::validar(string valor)
 {
 
+    if(valor.find("@") == string::npos) {
+        throw invalid_argument("Argumento inválido.");
+    };
+
+
 }
 
 void Email::setValor(string valor)
@@ -191,7 +207,8 @@ void Email::setValor(string valor)
 
 vector<string> inicializaListaDeIdiomasPermitidos()
 {
-    vector<string> idiomasPermitidos;
+    std::vector<string> idiomasPermitidos;
+    
     idiomasPermitidos.push_back("Ingles");
     idiomasPermitidos.push_back("Chines Mandarim");
     idiomasPermitidos.push_back("Hindi");
@@ -211,9 +228,8 @@ void Idioma::validar(string valor)
     vector<string> idiomasPermitidos = inicializaListaDeIdiomasPermitidos();
     bool entradaValida = false;
 
-    for(auto idioma : idiomasPermitidos)
-    {
-        if(idioma == valor) {entradaValida = true;};
+    for (int i = 0; i < idiomasPermitidos.size()-1; i++) {
+        if(idiomasPermitidos[i] == valor) {entradaValida = true;};
     }
 
     if(entradaValida == false) {
@@ -234,8 +250,16 @@ void Idioma::setValor(string valor)
 
 void Nome::validar(string valor)
 {
-    if (valor == "1312412")
+    bool validacao_numero_caracteres = valor.length() <= 30;
+
+    if (validacao_numero_caracteres == false) {
         throw invalid_argument("Argumento invalido.");
+    };
+
+    for(char letra : valor) {
+        if(isdigit(letra)) throw invalid_argument("O caractere não é uma entrada válida");
+    }
+
 }
 
 void Nome::setValor(string valor)
@@ -251,8 +275,10 @@ void Nome::setValor(string valor)
 
 void Nota::validar(string valor)
 {
-    if (0 > std::stoi(valor) && std::stoi(valor) > 10)
+    if (0 > std::stoi(valor) && std::stoi(valor) > 10) {
         throw invalid_argument("Argumento invalido.");
+    };
+
 }
 
 void Nota::setValor(string valor)
@@ -310,8 +336,9 @@ void Pais::setValor(string valor)
 
 void Senha::validar(string valor)
 {
-    if (valor == "123")
+    if (valor.length() < 5) {
         throw invalid_argument("Argumento invalido.");
+    };
 }
 
 void Senha::setValor(string valor)

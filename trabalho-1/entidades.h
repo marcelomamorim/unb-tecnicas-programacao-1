@@ -1,9 +1,11 @@
 #ifndef ENTIDADES_H_INCLUDED
 #define ENTIDADES_H_INCLUDED
 
-// --------------------------------------------------------------------------
-// Entidade Usuario
 
+/**
+ * @brief Usuário hospedado em algum hotel
+ * 
+ */
 class Usuario
 {
 private:
@@ -14,17 +16,71 @@ private:
     Data data;
     Descricao descricao;
 public:
+    /**
+     * @brief Define o objeto Nome na classe Usuário
+     * 
+     */
     void setNome(const Nome&);
+    /**
+     * @brief Busca o objeto Nome
+     * 
+     * @return Nome 
+     */
     Nome getNome() const;
+    /**
+     * @brief Define o objeto Email na classe Usuário
+     * 
+     */
     void setEmail(const Email&);
+    /**
+     * @brief Busca o objeto Email
+     * 
+     * @return Email 
+     */
     Email getEmail() const;
+    /**
+     * @brief Define o objeto Senha na classe Usuário
+     * 
+     */
     void setSenha(const Senha&);
+    /**
+     * @brief Busca o objeto Senha
+     * 
+     * @return Senha 
+     */
     Senha getSenha() const;
+    /**
+     * @brief Define o objeto Idioma na classe Usuário
+     * 
+     */
     void setIdioma(const Idioma&);
+    /**
+     * @brief Busca o objeto Idioma
+     * 
+     * @return Idioma 
+     */
     Idioma getIdioma() const;
+    /**
+     * @brief Define o objeto Data na classe Usuário
+     * 
+     */
     void setData(const Data&);
+    /**
+     * @brief Busca o objeto Data
+     * 
+     * @return Data 
+     */
     Data getData() const;
+    /**
+     * @brief Define o objeto Descricao na classe Usuário
+     * 
+     */
     void setDescricao(const Descricao&);
+    /**
+     * @brief Busca o objeto Descrição
+     * 
+     * @return Descricao 
+     */
     Descricao getDescricao() const;
 };
 
@@ -88,9 +144,11 @@ inline Descricao Usuario::getDescricao() const
     return descricao;
 }
 
-// --------------------------------------------------------------------------
-// Entidade Hospedagem
 
+/**
+ * @brief Hospedagem do usuário
+ * 
+ */
 class Hospedagem
 {
 private:
@@ -100,15 +158,60 @@ private:
     Nota nota;
     Descricao descricao;
 public:
+    /**
+     * @brief Define o objeto Código
+     * 
+     */
     void setCodigo(const Codigo&);
+    /**
+     * @brief Busca o objeto Código
+     * 
+     * @return Codigo 
+     */
     Codigo getCodigo() const;
+    /**
+     * @brief Define o objeto Cidade
+     * 
+     */
     void setCidade(const Cidade&);
+    /**
+     * @brief Busca o objeto Cidade
+     * 
+     * @return Cidade 
+     */
     Cidade getCidade() const;
+    /**
+     * @brief Define o objeto Pais
+     * 
+     */
     void setPais(const Pais&);
+    /**
+     * @brief Busca o objeto País
+     * 
+     * @return Pais 
+     */
     Pais getPais() const;
+    /**
+     * @brief Define o objeto Nota
+     * 
+     */
     void setNota(const Nota&);
+    /**
+     * @brief Busca o objeto Nota
+     * 
+     * @return Nota 
+     */
     Nota getNota() const;
+    /**
+     * @brief Define o objeto Descricao
+     * 
+     */
     void setDescricao(const Descricao&);
+    /**
+     * @brief Busca o objeto Descrição
+     * 
+     * @return Descricao 
+     */
     Descricao getDescricao() const;
 };
 
@@ -163,9 +266,10 @@ inline Descricao Hospedagem::getDescricao() const
 }
 
 
-// --------------------------------------------------------------------------
-// Entidade Avaliacao
-
+/**
+ * @brief Avaliação dada pelo usuário
+ * 
+ */
 class Avaliacao
 {
 private:
@@ -173,11 +277,38 @@ private:
     Nota nota;
     Descricao descricao;
 public:
+    /**
+     * @brief Define o objeto Código
+     * 
+     */
     void setCodigo(const Codigo&);
+    /**
+     * @brief Busca o objeto Código
+     * 
+     * @return Codigo 
+     */
     Codigo getCodigo() const;
+    /**
+     * @brief Define o objeto Nota
+     * 
+     */
     void setNota(const Nota&);
+    /**
+     * @brief Busca o objeto Nota
+     * 
+     * @return Nota 
+     */
     Nota getNota() const;
+    /**
+     * @brief Define o objeto Descricao
+     * 
+     */
     void setDescricao(const Descricao&);
+    /**
+     * @brief Busca o objeto Descrição
+     * 
+     * @return Descricao 
+     */
     Descricao getDescricao() const;
 };
 
