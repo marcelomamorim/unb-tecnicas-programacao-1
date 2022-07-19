@@ -3,6 +3,9 @@
 // --------------------------------------------------------------------------
 // Implementações de métodos de classe de teste de unidade DOMAIN = CÓDIGO.
 
+const string TUCodigo::VALOR_VALIDO = "20";
+const string TUCodigo::VALOR_INVALIDO = "30";
+
 void TUCodigo::setUp()
 {
     codigo = new Codigo();
@@ -53,6 +56,9 @@ int TUCodigo::run()
 
 // --------------------------------------------------------------------------
 // Implementações de métodos de classe de teste de unidade DOMAIN = NOME.
+
+const string TUNome::VALOR_VALIDO = "20";
+const string TUNome::VALOR_INVALIDO = "30";
 
 void TUNome::setUp()
 {
@@ -105,6 +111,9 @@ int TUNome::run()
 // --------------------------------------------------------------------------
 // Implementações de métodos de classe de teste de unidade DOMAIN = EMAIL.
 
+const string TUEmail::VALOR_VALIDO = "20";
+const string TUEmail::VALOR_INVALIDO = "30";
+
 void TUEmail::setUp()
 {
     email = new Email();
@@ -155,6 +164,10 @@ int TUEmail::run()
 
 // --------------------------------------------------------------------------
 // Implementações de métodos de classe de teste de unidade DOMAIN = SENHA.
+
+const string TUSenha::VALOR_VALIDO = "20";
+const string TUSenha::VALOR_INVALIDO = "30";
+
 void TUSenha::setUp()
 {
     senha = new Senha();
@@ -206,6 +219,9 @@ int TUSenha::run()
 // --------------------------------------------------------------------------
 // Implementações de métodos de classe de teste de unidade DOMAIN = SENHA.
 
+const string TUIdioma::VALOR_VALIDO = "20";
+const string TUIdioma::VALOR_INVALIDO = "30";
+
 void TUIdioma::setUp()
 {
     idioma = new Idioma();
@@ -256,6 +272,9 @@ int TUIdioma::run()
 
 // --------------------------------------------------------------------------
 // Implementações de métodos de classe de teste de unidade DOMAIN = DATA.
+
+const string TUData::VALOR_VALIDO = "20";
+const string TUData::VALOR_INVALIDO = "30";
 
 void TUData::setUp()
 {
@@ -309,6 +328,9 @@ int TUData::run()
 // --------------------------------------------------------------------------
 // Implementações de métodos de classe de teste de unidade DOMAIN = DESCRIÇÃO.
 
+const string TUDescricao::VALOR_VALIDO = "20";
+const string TUDescricao::VALOR_INVALIDO = "30";
+
 void TUDescricao::setUp()
 {
     descricao = new Descricao();
@@ -359,6 +381,9 @@ int TUDescricao::run()
 
 // --------------------------------------------------------------------------
 // Implementações de métodos de classe de teste de unidade DOMAIN = CIDADE.
+
+const string TUCidade::VALOR_VALIDO = "20";
+const string TUCidade::VALOR_INVALIDO = "30";
 
 void TUCidade::setUp()
 {
@@ -412,6 +437,9 @@ int TUCidade::run()
 // --------------------------------------------------------------------------
 // Implementações de métodos de classe de teste de unidade DOMAIN = PAÍS.
 
+const string TUPais::VALOR_VALIDO = "20";
+const string TUPais::VALOR_INVALIDO = "30";
+
 void TUPais::setUp()
 {
     pais = new Pais();
@@ -462,6 +490,9 @@ int TUPais::run()
 
 // --------------------------------------------------------------------------
 // Implementações de métodos de classe de teste de unidade DOMAIN = NOTA.
+
+const string TUNota::VALOR_VALIDO = "20";
+const string TUNota::VALOR_INVALIDO = "30";
 
 void TUNota::setUp()
 {
@@ -515,6 +546,8 @@ int TUNota::run()
 // --------------------------------------------------------------------------
 // Implementações de métodos de classe de teste de unidade ENTIDADES.
 
+const string TUUsuario::VALOR_VALIDO = "20";
+
 void TUUsuario::setUp()
 {
     usuario = new Usuario();
@@ -546,6 +579,8 @@ int TUUsuario::run()
 // --------------------------------------------------------------------------
 // Implementações de métodos de classe de teste de unidade ENTIDADES.
 
+const string TUHospedagem::VALOR_VALIDO = "20";
+
 void TUHospedagem::setUp()
 {
     hospedagem = new Hospedagem();
@@ -576,6 +611,8 @@ int TUHospedagem::run()
 
 // --------------------------------------------------------------------------
 // Implementações de métodos de classe de teste de unidade ENTIDADES.
+
+const string TUAvaliacao::VALOR_VALIDO = "20";
 
 void TUAvaliacao::setUp()
 {
