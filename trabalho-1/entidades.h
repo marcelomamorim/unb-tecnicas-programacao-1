@@ -19,7 +19,7 @@ public:
     void setEmail(const Email&);
     Email getEmail() const;
     void setSenha(const Senha&);
-    Senha getSenha) const;
+    Senha getSenha() const;
     void setIdioma(const Idioma&);
     Idioma getIdioma() const;
     void setData(const Data&);
@@ -107,9 +107,9 @@ public:
     void setPais(const Pais&);
     Pais getPais() const;
     void setNota(const Nota&);
-    Pais getNota() const;
+    Nota getNota() const;
     void setDescricao(const Descricao&);
-    Pais getDescricao() const;
+    Descricao getDescricao() const;
 };
 
 inline void Hospedagem::setCodigo(const Codigo &codigo)

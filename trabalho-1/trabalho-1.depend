@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1658188901 source:/home/mma/Documents/github/unb-tecnicas-programacao-1/trabalho-1/main.cpp
+	<iostream>
+	"dominios.h"
+	"entidades.h"
+	"testes.h"
+
+1658187327 /home/mma/Documents/github/unb-tecnicas-programacao-1/trabalho-1/dominios.h
+	<stdexcept>
+
+1658187157 /home/mma/Documents/github/unb-tecnicas-programacao-1/trabalho-1/entidades.h
+
+1658190096 /home/mma/Documents/github/unb-tecnicas-programacao-1/trabalho-1/testes.h
+	"dominios.h"
+	"entidades.h"
+

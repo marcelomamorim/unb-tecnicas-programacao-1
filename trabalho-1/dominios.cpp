@@ -1,31 +1,15 @@
 #include "dominios.h"
 
+#include <iostream>
+#include <vector>
+#include <stdio.h>
+
 
 using namespace std;
 
 
 // --------------------------------------------------------------------------
 // Implementações de métodos da classe Cidade
-
-void Cidade::validar(string valor)
-{
-
-    vector<string> cidadesPermitidas = inicializaListaCidadesPermitidas();
-    bool entradaValida = false;
-
-    for(auto cidade : cidadesPermitidas) {
-        if(valor == cidade) { entradaValida == true };
-    };
-
-    if(entradaValida == false) { throw invalid_argument("A cidade " + valor + " não está na lista de cidades permitidas."); };
-
-}
-
-void Cidade::setValor(string valor)
-{
-    validar(valor);
-    this->valor = valor;
-}
 
 vector<string> inicializaListaCidadesPermitidas()
 {
@@ -54,6 +38,25 @@ vector<string> inicializaListaCidadesPermitidas()
 };
 
 
+void Cidade::validar(string valor)
+{
+
+    vector<string> cidadesPermitidas = inicializaListaCidadesPermitidas();
+    bool entradaValida = false;
+
+    for(auto cidade : cidadesPermitidas) {
+        if(valor == cidade) { entradaValida == true; };
+    };
+
+    if(entradaValida == false) { throw invalid_argument("A cidade " + valor + " não está na lista de cidades permitidas."); };
+
+}
+
+void Cidade::setValor(string valor)
+{
+    validar(valor);
+    this->valor = valor;
+}
 
 void Codigo::validar(string codigo)
 {
@@ -61,7 +64,7 @@ void Codigo::validar(string codigo)
     string digito_verificador = codigo.substr(9,10);
 
     for(char digito : codigo) {
-        if(!isdigit(digito)) throw invalid_argument("O caractere " + digito + " não é uma entrada válida");
+        if(!isdigit(digito)) throw invalid_argument("O caractere não é uma entrada válida");
     }
 
 }
@@ -75,28 +78,6 @@ void Codigo::setValor(string valor)
 // --------------------------------------------------------------------------
 // Implementações de métodos da classe Data
 
-void Data::validar(string valor)
-{
-    int posicao_barra = valor.find("/");
-    string dia = valor.substr(0, posicao_barra);
-    string mes = valor.substr(posicao_barra, valor.length());
-
-    vector<string> formatoMesesPermitods = inicializaFormatoDeMesesPermitidos();
-    bool oMesEstaNoFormatoValido = oMesEstaNoFormatoValido(mes, formatoMesesPermitods);
-    bool oDiaEstaNoFormatoValido = stoi(dia) >= 1 && stoi(dia) <= 31;
-
-    if(!oDiaEstaNoFormatoValido || !oMesEstaNoFormatoValido)
-    {
-        throw invalid_argument("Dia ou mês inseridos com valores não suportados.");
-    }
-
-}
-
-void Data::setValor(string valor)
-{
-    validar(valor);
-    this->valor = valor;
-}
 
 vector<string> inicializaFormatoDeMesesPermitidos()
 {
@@ -122,12 +103,36 @@ bool oMesEstaNoFormatoValido(string mesInserido, vector<string> mesesNoFormatoPe
     bool formatoValido = false;
 
     for(auto mes : mesesNoFormatoPermitido) {
-        if(mesInserido == mes) { formatoValido == true };
+        if(mesInserido == mes) { formatoValido == true; };
     };
 
     return formatoValido;
 };
 
+
+void Data::validar(string valor)
+{
+    int posicao_barra = valor.find("/");
+    string dia = valor.substr(0, posicao_barra);
+    string mes = valor.substr(posicao_barra, valor.length());
+
+    vector<string> formatoMesesPermitods = inicializaFormatoDeMesesPermitidos();
+    bool ehValido = oMesEstaNoFormatoValido(mes, formatoMesesPermitods);
+    bool oDiaEstaNoFormatoValido = stoi(dia) >= 1 && stoi(dia) <= 31;
+
+    if(!oDiaEstaNoFormatoValido || !ehValido)
+    {
+        throw invalid_argument("Dia ou mês inseridos com valores não suportados.");
+    }
+
+}
+
+
+void Data::setValor(string valor)
+{
+    validar(valor);
+    this->valor = valor;
+}
 
 // --------------------------------------------------------------------------
 // Implementações de métodos da classe Descricao
@@ -184,28 +189,6 @@ void Email::setValor(string valor)
 // --------------------------------------------------------------------------
 // Implementações de métodos da classe Idioma
 
-void Idioma::validar(string valor)
-{
-    vector<string> idiomasPermitidos = inicializaListaDeIdiomasPermitidos();
-    bool entradaValida = false;
-
-    for(auto idioma : idiomasPermitidos)
-    {
-        if(idioma == valor) {entradaValida = true};
-    }
-
-    if(entradaValida == false) {
-        throw invalid_argument("O idioma " + valor + " não está na lista de idiomas permitidos.");
-    };
-
-}
-
-void Idioma::setValor(string valor)
-{
-    validar(valor);
-    this->valor = valor;
-}
-
 vector<string> inicializaListaDeIdiomasPermitidos()
 {
     vector<string> idiomasPermitidos;
@@ -223,13 +206,35 @@ vector<string> inicializaListaDeIdiomasPermitidos()
     return idiomasPermitidos;
 };
 
+void Idioma::validar(string valor)
+{
+    vector<string> idiomasPermitidos = inicializaListaDeIdiomasPermitidos();
+    bool entradaValida = false;
+
+    for(auto idioma : idiomasPermitidos)
+    {
+        if(idioma == valor) {entradaValida = true;};
+    }
+
+    if(entradaValida == false) {
+        throw invalid_argument("O idioma " + valor + " não está na lista de idiomas permitidos.");
+    };
+
+}
+
+void Idioma::setValor(string valor)
+{
+    validar(valor);
+    this->valor = valor;
+}
+
 
 // --------------------------------------------------------------------------
 // Implementações de métodos da classe Nome
 
 void Nome::validar(string valor)
 {
-    if (valor == INVALIDO)
+    if (valor == "1312412")
         throw invalid_argument("Argumento invalido.");
 }
 
@@ -260,27 +265,6 @@ void Nota::setValor(string valor)
 // --------------------------------------------------------------------------
 // Implementações de métodos da classe Pais
 
-void Pais::validar(string valor)
-{
-    vector<string> paisesPermitidos = inicializaListaDePaisesPermitidos();
-    bool entradaValida = false;
-
-    for(auto pais : paisesPermitidos)
-    {
-        if(pais == valor) {entradaValida = true};
-    }
-
-    if(entradaValida == false) {
-        throw invalid_argument("O país " + valor + " não está na lista de países permitidos.");
-    };
-}
-
-void Pais::setValor(string valor)
-{
-    validar(valor);
-    this->valor = valor;
-}
-
 vector<string> inicializaListaDePaisesPermitidos()
 {
     vector<string> paisesPermitidos;
@@ -300,13 +284,33 @@ vector<string> inicializaListaDePaisesPermitidos()
     return paisesPermitidos;
 };
 
+void Pais::validar(string valor)
+{
+    vector<string> paisesPermitidos = inicializaListaDePaisesPermitidos();
+    bool entradaValida = false;
+
+    for(auto pais : paisesPermitidos)
+    {
+        if(pais == valor) {entradaValida = true;};
+    }
+
+    if(entradaValida == false) {
+        throw invalid_argument("O país " + valor + " não está na lista de países permitidos.");
+    };
+}
+
+void Pais::setValor(string valor)
+{
+    validar(valor);
+    this->valor = valor;
+}
 
 // --------------------------------------------------------------------------
 // Implementações de métodos da classe Senha
 
 void Senha::validar(string valor)
 {
-    if (valor == INVALIDO)
+    if (valor == "123")
         throw invalid_argument("Argumento invalido.");
 }
 

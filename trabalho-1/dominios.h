@@ -1,6 +1,9 @@
 #ifndef DOMINIOS_H_INCLUDED
 #define DOMINIOS_H_INCLUDED
 
+#include <stdexcept>
+
+using namespace std;
 
 /*
     1 - definição da classe (propósito da classe);
@@ -10,85 +13,194 @@
     5 - ver exemplo 1 disponibilizado no aprender3.unb.br;
 */
 
+// --------------------------------------------------------------------------
+// Domínio Cidade
 
-class Dominio
+class Cidade
 {
-    private:
-        string valor;
-        void validar(String);
-    public:
-        void setValor(String);
-        string getValor() const;
+private:
+    string valor;
+    void validar(string);
+
+public:
+    void setValor(string);
+    string getValor() const;
 };
 
-inline string Dominio::getValor() const
+inline string Cidade::getValor() const
 {
     return valor;
 }
 
-
-// --------------------------------------------------------------------------
-// Domínio Cidade
-
-
-class Cidade : public Dominio{};
-
-
 // --------------------------------------------------------------------------
 // Domínio Codigo
 
+class Codigo
+{
+private:
+    string valor;
+    void validar(string);
 
-class Codigo : public Dominio{};
+public:
+    void setValor(string);
+    string getValor() const;
+};
 
+inline string Codigo::getValor() const
+{
+    return valor;
+}
 
 // --------------------------------------------------------------------------
 // Domínio Data
 
+class Data
+{
+private:
+    string valor;
+    void validar(string);
 
-class Data : public Dominio{};
+public:
+    void setValor(string);
+    string getValor() const;
+};
+
+inline string Data::getValor() const
+{
+    return valor;
+}
 
 // --------------------------------------------------------------------------
 // Domínio Descricao
 
+class Descricao
+{
+private:
+    string valor;
+    void validar(string);
 
-class Descricao : public Dominio{};
+public:
+    void setValor(string);
+    string getValor() const;
+};
 
+inline string Descricao::getValor() const
+{
+    return valor;
+}
 
 // --------------------------------------------------------------------------
 // Domínio Email
 
+class Email
+{
+private:
+    string valor;
+    void validar(string);
 
-class Email : public Dominio{};
+public:
+    void setValor(string);
+    string getValor() const;
+};
+
+inline string Email::getValor() const
+{
+    return valor;
+}
 
 // --------------------------------------------------------------------------
 // Domínio Idioma
 
+class Idioma
+{
+private:
+    string valor;
+    void validar(string);
 
-class Idioma : public Dominio{};
+public:
+    void setValor(string);
+    string getValor() const;
+};
+
+inline string Idioma::getValor() const
+{
+    return valor;
+}
 
 // --------------------------------------------------------------------------
 // Domínio Nome
 
+class Nome
+{
+private:
+    string valor;
+    void validar(string);
 
-class Nome : public Dominio{};
+public:
+    void setValor(string);
+    string getValor() const;
+};
+
+inline string Nome::getValor() const
+{
+    return valor;
+}
 
 // --------------------------------------------------------------------------
 // Domínio Nota
 
+class Nota
+{
+private:
+    string valor;
+    void validar(string);
 
-class Nota : public Dominio{};
+public:
+    void setValor(string);
+    string getValor() const;
+};
+
+inline string Nota::getValor() const
+{
+    return valor;
+}
 
 // --------------------------------------------------------------------------
 // Domínio Pais
 
+class Pais
+{
+private:
+    string valor;
+    void validar(string);
 
-class Pais : public Dominio{};
+public:
+    void setValor(string);
+    string getValor() const;
+};
+
+inline string Pais::getValor() const
+{
+    return valor;
+}
 
 // --------------------------------------------------------------------------
 // Domínio Senha
 
+class Senha
+{
+private:
+    string valor;
+    void validar(string);
 
-class Senha : public Dominio{};
+public:
+    void setValor(string);
+    string getValor() const;
+};
 
+inline string Senha::getValor() const
+{
+    return valor;
+}
 
 #endif // DOMINIOS_H_INCLUDED

@@ -7,43 +7,44 @@
 using namespace std;
 
 // --------------------------------------------------------------------------
-// Declaração de classe para teste de unidade de classes de domínio e entidades.
-
-class TesteUnitario {
-    private:
-        int estado;
-        void setUp();
-        void tearDown();
-        void testarCenarioSucesso();
-    public:
-        const static int SUCESSO =  0;
-        const static int FALHA   = -1;
-        int run();
-};
-
-// --------------------------------------------------------------------------
 // Declaração de classe para teste de unidade de classes de domínio = Código
 
 
-class TUCodigo : public TesteUnitario
+class TUCodigo
 {
 private:
-    const static int VALOR_VALIDO   = 20;
-    const static int VALOR_INVALIDO = 30;
+    const static string VALOR_VALIDO;
+    const static string VALOR_INVALIDO;
     Codigo *codigo;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
     void testarCenarioFalha();
+public:
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 };
 
 // --------------------------------------------------------------------------
 // Declaração de classe para teste de unidade de classe domínio = Cidade.
 
-class TUCidade : public TesteUnitario
+class TUCidade
 {
 private:
-    const static int VALOR_VALIDO   = 20;
-    const static int VALOR_INVALIDO = 30;
+    const static string VALOR_VALIDO;
+    const static string VALOR_INVALIDO;
     Cidade *cidade;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
     void testarCenarioFalha();
+public:
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 };
 
 
@@ -51,13 +52,21 @@ private:
 // Declaração de classe para teste de unidade de classe domínio = Data.
 
 
-class TUData : public TesteUnitario
+class TUData
 {
 private:
-    const static int VALOR_VALIDO   = 20;
-    const static int VALOR_INVALIDO = 30;
+    const static string VALOR_VALIDO;
+    const static string VALOR_INVALIDO;
     Data *data;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
     void testarCenarioFalha();
+public:
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 };
 
 
@@ -65,13 +74,21 @@ private:
 // Declaração de classe para teste de unidade de classe domínio = Descrição.
 
 
-class TUDescricao : public TesteUnitario
+class TUDescricao
 {
 private:
-    const static int VALOR_VALIDO   = 20;
-    const static int VALOR_INVALIDO = 30;
+    const static string VALOR_VALIDO;
+    const static string VALOR_INVALIDO;
     Descricao *descricao;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
     void testarCenarioFalha();
+public:
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 };
 
 
@@ -79,13 +96,21 @@ private:
 // Declaração de classe para teste de unidade de classe domínio = Email.
 
 
-class TUEmail : public TesteUnitario
+class TUEmail
 {
 private:
-    const static int VALOR_VALIDO   = 20;
-    const static int VALOR_INVALIDO = 30;
+    const static string VALOR_VALIDO;
+    const static string VALOR_INVALIDO;
     Email *email;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
     void testarCenarioFalha();
+public:
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 };
 
 
@@ -93,26 +118,43 @@ private:
 // Declaração de classe para teste de unidade de classe domínio = Idioma.
 
 
-class TUIdioma : public TesteUnitario
+class TUIdioma
 {
 private:
-    const static int VALOR_VALIDO   = 20;
-    const static int VALOR_INVALIDO = 30;
+    const static string VALOR_VALIDO;
+    const static string VALOR_INVALIDO;
     Idioma *idioma;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
     void testarCenarioFalha();
+public:
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
+};
 
 
 // --------------------------------------------------------------------------
 // Declaração de classe para teste de unidade de classe domínio = Nome.
 
 
-class TUNome : public TesteUnitario
+class TUNome
 {
 private:
-    const static int VALOR_VALIDO   = 20;
-    const static int VALOR_INVALIDO = 30;
+    const static string VALOR_VALIDO;
+    const static string VALOR_INVALIDO;
     Nome *nome;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
     void testarCenarioFalha();
+public:
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 };
 
 
@@ -120,34 +162,100 @@ private:
 // Declaração de classe para teste de unidade de classe domínio = Nota.
 
 
-class TUNota : public TesteUnitario
+class TUNota
 {
 private:
-    const static int VALOR_VALIDO   = 20;
-    const static int VALOR_INVALIDO = 30;
+    const static string VALOR_VALIDO;
+    const static string VALOR_INVALIDO;
     Nota *nota;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
     void testarCenarioFalha();
+public:
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
+};
+
+// --------------------------------------------------------------------------
+// Declaração de classe para teste de unidade de classe domínio = País.
+
+
+class TUPais
+{
+private:
+    const static string VALOR_VALIDO;
+    const static string VALOR_INVALIDO;
+    Pais *pais;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
+public:
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
+};
+
+// --------------------------------------------------------------------------
+// Declaração de classe para teste de unidade de classe domínio = Senha.
+
+
+class TUSenha
+{
+private:
+    const static string VALOR_VALIDO;
+    const static string VALOR_INVALIDO;
+    Senha *senha;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
+public:
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 };
 
 
 // --------------------------------------------------------------------------
 // Declaração de classe para teste de unidade de classe entidade = Usuario.
 
-class TUUsuario : public TesteUnitario
+class TUUsuario
 {
 private:
-    const static int VALOR_VALIDO   = 20;
+    const static string VALOR_VALIDO;
     Usuario *usuario;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+public:
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 };
 
 // --------------------------------------------------------------------------
 // Declaração de classe para teste de unidade de classe entidade = Hospedagem.
 
-class TUHospedagem : public TesteUnitario
+class TUHospedagem
 {
 private:
-    const static int VALOR_VALIDO   = 20;
+    const static string VALOR_VALIDO;
     Hospedagem *hospedagem;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+public:
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 
 };
 
@@ -155,11 +263,19 @@ private:
 // --------------------------------------------------------------------------
 // Declaração de classe para teste de unidade de classe entidade = Avaliacao.
 
-class TUAvaliacao : public TesteUnitario
+class TUAvaliacao
 {
 private:
-    const static int VALOR_VALIDO   = 20;
+    const static string VALOR_VALIDO;
     Avaliacao *avaliacao;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+public:
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 };
 
 
